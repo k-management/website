@@ -1,0 +1,43 @@
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div class="surface contact-card">
+      <span class="section-kicker">Contact</span>
+      <h2>Discuss a mandate, assessment, or investment opportunity.</h2>
+      <p>
+        The best first step is a short outline of the business, current stage, and what kind of support
+        or review you are looking for.
+      </p>
+
+      <div class="contact-list">
+        <a class="contact-pill" href="mailto:contact@k-management.com.hk">contact@k-management.com.hk</a>
+        <span class="contact-pill">Hong Kong S.A.R.</span>
+        <a class="contact-pill" href="{{ '/tariffs.html' | relative_url }}">See indicative tariffs</a>
+      </div>
+    </div>
+
+    <div class="surface form-card">
+      <span class="section-kicker">Inquiry form</span>
+      <h3>Send an inquiry</h3>
+      <form id="contact-form" class="contact-form">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          Company
+          <input type="text" name="company" placeholder="Company or fund" />
+        </label>
+        <label>
+          Message
+          <textarea name="message" placeholder="Tell us briefly what you are looking for." required></textarea>
+        </label>
+        <button type="submit" class="button button-primary">Send</button>
+      </form>
+      <p class="form-note">Submitting opens your email app with the message prefilled to contact@k-management.com.hk.</p>
+    </div>
+  </div>
+</section>
