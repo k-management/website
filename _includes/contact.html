@@ -17,7 +17,10 @@
     <div class="surface form-card">
       <span class="section-kicker">Inquiry form</span>
       <h3>Send an inquiry</h3>
-      <form id="contact-form" class="contact-form" action="mailto:contact@k-management.com.hk" method="post" enctype="text/plain">
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/contact@k-management.com.hk" method="post">
+        <input type="hidden" name="_subject" value="New K-Management website inquiry" />
+        <input type="hidden" name="_next" value="https://www.k-management.com.hk/thanks.html" />
+        <input type="hidden" name="_template" value="table" />
         <label>
           Name
           <input type="text" name="name" placeholder="Your name" required />
@@ -34,9 +37,9 @@
           Message
           <textarea name="message" placeholder="Tell us briefly what you are looking for." required></textarea>
         </label>
-        <button type="submit" class="button button-primary">Open email draft</button>
+        <button type="submit" class="button button-primary">Send inquiry</button>
       </form>
-      <p class="form-note">This opens a draft in your email app. Review it and press Send there. You can also email contact@k-management.com.hk directly.</p>
+      <p class="form-note">Your details will be processed by <a href="https://formsubmit.co/privacy.pdf">FormSubmit</a> to email your inquiry to K-Management. A spam check may appear before submission.</p>
     </div>
   </div>
 </section>
