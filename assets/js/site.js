@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  function initialize() {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
   const form = document.getElementById('contact-form');
-  if (!form) return;
+  if (!form || form.dataset.initialized) return;
+  form.dataset.initialized = 'true';
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -23,4 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.location.href = `mailto:contact@k-management.com.hk?subject=${subject}&body=${body}`;
   });
-});
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initialize, { once: true });
+  } else {
+    initialize();
+  }
+})();
